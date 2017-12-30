@@ -1,0 +1,500 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+$primary_color:#5350a2;
+$content_color:#eeeef0;
+$text_color:#34495e;
+$price_color:#6bc7be;
+body{
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+/*    background:url(../images/main_layout.jpg) no-repeat center top;
+    opacity: .5;*/
+    a{
+        text-decoration: none;
+    }
+    .page-heading{
+        font-size:26px;
+    }
+}
+
+
+/*=========================Main Menu Stylesheet Start Here================//
+==========================================================================*/
+
+#main_menu {
+    #menu{
+        margin:57px 0 0 0;
+    }
+    .navbar-brand{
+        height: auto;
+        padding: 12px 15px;
+    }
+    .navbar{
+        border-right: 0;
+        margin-bottom: 0;
+        li{
+            margin-right:2px;
+            a{
+                padding:4px 28px;
+                background: $primary_color;
+                color:lighten($primary_color,100%);
+            }
+            a.upcomming{
+                padding:4px 37px !important
+            }
+            a.result{
+                padding: 4px 30px 4px 24px !important;
+                font-size: 14px;
+            }
+            a.news{
+                padding: 4px 21px 4px 24px !important;
+            }
+        }
+        .navbar-nav{
+            margin-left: -12px;
+        }
+    }
+    .navbar-default{
+        background: transparent;
+        position:absolute;
+        left:0;
+        right:0;
+        z-index: 5;
+        border-color: transparent;
+    }
+    .logo{
+        margin:0 44px 0 51px; 
+    }
+    form.navbar-form.navbar-right{
+        width:39% !important;
+    }
+
+    //Navbar Form stylesheet start here
+    .navbar-form{
+        margin-top:10px;
+        input.form-control{
+            font-size: 10px;
+            height: 18px;
+            padding: 4px 9px;
+            @include border-radius(0px);
+        }
+        .email{
+            width:138px;
+            input.form-control{
+                width:100%;
+            }
+        }
+        .password{
+            width: 87px;
+            margin-left: 5px;
+            input.form-control{
+                width:100%;
+            }
+        }
+        .btn{
+            font-size: 10px;
+            background: #76cac4;
+            border:none;
+            @include border-radius(0px);
+            height: 18px;
+            padding: 2px 10px;
+            margin:0 3px 0 5px;
+            color:lighten($primary_color,100%);
+
+        }
+        .register{
+            font-size:12px;
+            color:$primary_color;
+        }
+    } //Navbar Form stylesheet End here
+}
+/*=========================Main Menu Stylesheet End Here================//
+==========================================================================*/
+
+
+
+
+
+/*=========================Main Slider Stylesheet Start Here================//
+==========================================================================*/
+#main_slider{
+    padding:0;
+    .item{
+        .carousel-caption{
+            left: 24.4%;
+            right: 0;
+            top: 39%;
+            h3{
+                font-size: 30px;
+                color:$text_color;
+                text-shadow: none;
+            }
+        }
+    }
+}/*=========================Main Slider Stylesheet End Here================//
+==========================================================================*/
+
+
+
+
+/*=======================App Social icon section Stylesheet Start Here================//
+=======================================================================================*/
+.apps_social_icons{
+    position: absolute;
+    z-index: 15;
+    margin: -176px 0 0 0;
+    left: 0;
+    right: 0;
+    .app_icons{
+        ul{
+            margin-left:58px;
+            padding:0;
+            li{
+                display:inline-block;
+            }
+        }
+    }
+    .social_share{
+        margin-top: 55px;
+        margin-right: 13px;
+        h6{
+            font-size: 11px;
+            word-spacing: 2px;
+            margin-bottom: 5px;
+        }
+        ul{
+            padding:0;
+            li{
+                margin:2px;
+                display:inline-block;
+                a{
+                    width: 32px;
+                    padding: 1px 4px;
+                    height: 32px;
+                    @include border-radius(5px);
+                    display: inline-block;
+                    background:$primary_color;
+                    i{
+                        color:#b1b4c7;
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+/*=======================App Social icon section Stylesheet End Here================//
+=======================================================================================*/
+
+
+/*=======================Tab with sidebar Stylesheet Start Here================//
+=======================================================================================*/
+
+.tab-with-sidebar{
+    .col-md-9{
+        width:79%;
+        background: $content_color;
+    }
+    .col-md-3{
+        width:21%;
+    }
+    .left-side{
+        /*======Service Stylesheet Start Here=============*/
+        .services{
+            background: $primary_color;
+            .nav-tabs{
+                li{
+                    width: calc(35.76% - 20px);
+                    background:  $primary_color;
+                    a{
+                        color:lighten($primary_color,100%);
+                        @include border-radius(0px);
+                        padding:20px 15px 48px;
+                        position:relative;
+                        margin-left:29px;
+                        font-size:19px;
+                        i{
+                            display: block;
+                            font-size: 110px;
+                            color:lighten($primary_color,100%);
+                        }
+                        &:after{
+                            content: "";
+                            width: 0;
+                            height: 0;
+                            border-left: 18px solid transparent;
+                            border-right: 18px solid transparent;
+                            border-bottom: 18px solid $content_color;
+                            position: absolute;
+                            bottom:-1px;
+                            left:5px;
+                            right:0;
+                            margin:auto;
+                            opacity:0;
+                        }
+                        &:hover, &:focus{
+                            background: transparent;
+                            border-color:$primary_color;
+                            color:#fdb917;
+                        }
+                        i{
+                            color:inherit;
+                        }
+                    }
+
+                }
+                li.active{
+                    a{
+                        background: transparent;
+                        border-color:$primary_color;
+                        color:#fdb917;
+                        i{
+                            color:inherit;
+                        }
+                        &:after{
+                            opacity:1;
+                        }
+                    }
+                } 
+            }
+        }
+        .tab-content{
+            .tab-pane{
+                .row{
+                    background: $content_color;
+                    padding:27px 15px;
+                    border-bottom:2px solid #dfdfe1;
+                }
+            }
+            .col-xs-8{
+                width:62%;
+            }
+            .col-xs-4{
+                width:38%;
+            }
+            #result, #create_form, #news{
+                ul{
+                    li{
+                        a{
+                            font-size:12px;
+                            margin-left: 21px;
+                            position: relative;
+                            line-height:26px;   
+                            word-spacing: -1.5px;
+                            color:$text_color;
+                            &:before{
+                                content: "\e900";
+                                font-family: 'icomoon' !important;
+                                position: absolute;
+                                font-size: 25px;
+                                left: -29px;
+                            }
+                        }
+                    }
+                }
+            }
+        }/*======Service Stylesheet end Here=============*/
+        
+        
+        /*======Service Item Stylesheet Start Here=============*/
+        .more_services{
+            padding-top:50px;
+            h1{
+                line-height: 40px;
+                color:$primary_color;
+                margin-left: 28px;
+                font-size: 26px;
+            }
+            .row{
+                background: #eeeef0;
+            }
+            .services_item{
+                .row{
+                    .thumbnail{
+                        background:transparent;
+                        border-color:transparent;
+                        padding-left: 17px;
+                        margin-bottom:28px;
+                        i{
+                            font-size: 164px;
+                            line-height: 120px;
+                            color:$primary_color;
+                        }
+                        .icon-desktop-icon{
+                            margin-left:31px;
+                        }
+                        .caption{
+                            padding:0 0 0 20px;
+                            p{
+                                padding: 9px 0;
+                                color: $text_color;
+                                line-height: 16px;
+                                font-size:14px;
+                            }
+                        }
+                    }
+                    .form_fillup{
+                        .thumbnail{
+                            i{
+                                font-size: 140px;
+                                margin-left: 7px;
+                            }
+                            .caption{
+                                padding-top:10px;
+                                p{
+
+                                }
+                            }
+                        }
+                    }
+                    .computer_search{
+                        .thumbnail{
+                            padding-left: 0px;
+                            .caption{
+                                padding:0;
+                            }
+                            i{
+                                font-size: 172px;
+                            }
+                        }
+                    }
+                }
+            }/*======Service Item Stylesheet End Here=============*/
+        }
+    }
+    .rightside_banner{
+        padding-left:12px;
+    }
+}/*=======================Tab with sidebar Stylesheet Start Here================//
+=======================================================================================*/
+
+
+
+/*=======================Priceing Stylesheet Start Here===================*/
+
+.price-list{
+    .container{
+		background: $primary_color;
+        padding-left:28px;
+        padding-right:28px;
+    }
+    .page-heading{
+        color:lighten($primary_color,100%);
+        line-height: 70px;
+    }
+    .price-listitem{
+        .row{
+            margin-left:0;
+            margin-right:0;
+            .col-xs-3{
+                padding-right:5px;
+                padding-left:5px;
+                ul.price{
+                    background:$content_color;
+                    border:1px solid rgba($primary_color,.5);
+                    li.header{
+                        background: $price_color;
+                        line-height: 38px;
+                        font-size:24px;
+                        padding: 0;
+                        color:lighten($primary_color,100%);
+                        border-bottom:1px solid rgba($primary_color,.5);
+                    }
+                    li{
+                        padding:15px 8px;
+                        border-bottom: 2px solid lighten($primary_color,100%);
+                        color:#363636;
+                        font-size:14px;
+                        i{
+                            font-size:35px;
+                        }
+                        .icon-check-icon, .icon-uncheck-icon{
+                            color:$primary_color;
+                            margin: -10px 0 0 0;
+                            float: right;
+                        }
+                        .icon-uncheck-icon{
+                            color:$price_color;
+                        }
+                        .btn{
+                            background: $primary_color;
+                            @include border-radius(0px);
+                            padding: 6px 15px;
+                            margin:5px 0 16px 23px;
+                        }
+                    }
+                    li.total_cost{
+                        font-weight: 600;
+                        font-size: 13px;
+                        border-bottom: 0;
+                    }
+                    li.text-center{
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+    .try-for-free{
+        .btn{
+            background: lighten($primary_color,100%);
+            @include border-radius(0px);
+            color:$text_color;
+            font-size: 24px;
+            padding:0px 18px;
+            margin-top:45px;
+			margin-bottom: 45px;
+        }
+    }
+}/*=======================Priceing Stylesheet End Here===================*/
+
+
+/*=======================Footer Stylesheet Start Here===================*/
+footer{
+    padding: 30px 0 20px 0;
+	.container{
+	background:$content_color;
+				}
+    .copyright{
+        p{
+            color:$primary_color;
+            margin:7px 0 0 34px;
+            font-size: 12px;
+        }
+    }
+    .footer-contact{
+        ul{
+            li{
+                display:inline-block;
+                a{
+                    display: block;
+                    font-size:15px;
+                    color:$primary_color;
+                    border-right: 2px solid #fcb816;
+                    padding:0 7px;
+                    margin:4px 0 0 -3px;
+                    font-size:14px;
+                }
+            }
+            li:last-child{
+                a{
+                    padding-right: 0;
+                    border:none;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    .office-time{
+        p{
+            font-size: 9px;
+            margin-left:-60px;
+        }
+    }
+}
+/*=======================Footer Stylesheet End Here===================*/
